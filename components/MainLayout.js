@@ -1,8 +1,15 @@
 import Link from "next/link";
+import Head from "next/head";
 
-export function MainLayout({children}) {
+export function MainLayout({children, title = 'Next App'}) {
     return (
         <>
+            <Head>
+                <title>{title} | Next Cources</title>
+                <meta name="keywords" content="next, js, nextjs"/>
+                <meta name="description" content="test nextjs"/>
+                <meta charSet="utf-8"/>
+            </Head>
             <nav>
                 <Link href={'/'}><a>Home</a></Link>
                 <Link href={'/about'}><a>Abount</a></Link>
@@ -12,7 +19,7 @@ export function MainLayout({children}) {
             <main>
                 {children}
             </main>
-            <style jsx>
+            <style jsx global>
                 {`
                        nav {
                        position: fix;
@@ -32,6 +39,7 @@ export function MainLayout({children}) {
                          }
                         main {
                             margin-top: 60px;
+                            padding: 1rem;
                         }
                 `}
             </style>
