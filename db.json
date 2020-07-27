@@ -1,0 +1,12 @@
+{
+  "posts": [
+    {"id":  1, "title":  "JavaScript Post", "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, sit!"},
+    {"id":  2, "title":  "Angular Post", "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, sit!"},
+
+    {"id":  3, "title":  "React Post", "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, sit!"},
+    {"id":  4, "title":  "typescript Post", "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, sit!"},
+    {"id":  5, "title":  "Nodejs Post", "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, sit!"}
+
+
+  ]
+}
