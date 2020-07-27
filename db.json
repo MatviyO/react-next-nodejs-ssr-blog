@@ -8,5 +8,8 @@
     {"id":  5, "title":  "Nodejs Post", "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, sit!"}
 
 
-  ]
+  ],
+  "about": {
+    "title": "About Page"
+  }
 }

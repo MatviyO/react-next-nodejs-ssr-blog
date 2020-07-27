@@ -1,8 +1,15 @@
 import {MainLayout} from "../components/MainLayout";
 import Link from "next/link";
 import {useEffect, useState} from "react";
+import {IPost} from "../interfaces/post";
+import {NextPageContext} from "next";
 
-export default function Posts({posts: serverPosts}) {
+
+interface PostsPagePost {
+    posts: IPost[];
+
+}
+export default function Posts({posts: serverPosts}: PostsPagePost) {
     const [posts, setPosts] = useState(serverPosts)
     useEffect(() => {
         async function load() {
@@ -34,16 +41,13 @@ export default function Posts({posts: serverPosts}) {
         </MainLayout>)
 }
 
-Posts.getInitialProps = async ({req}) => {
+Posts.getInitialProps = async ({req}: NextPageContext) => {
     if(!req) {
         return {posts: null}
     }
-    const response = await fetch('http://localhost:4200/posts')
-    const posts = await response.json()
+    const response = await fetch(`${process.env.API_URL}/posts`)
+    const posts: IPost[] = await response.json()
     return {
         posts
     }
 }
-
-//posts
-//post/:id

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Head from "next/head";
 import {MainLayout} from "../components/MainLayout";
 export default function Index() {
     return (
@@ -10,5 +9,4 @@ export default function Index() {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum harum id labore nesciunt velit.</p>
         </MainLayout>
     )
-
 }
